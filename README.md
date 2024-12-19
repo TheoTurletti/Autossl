@@ -40,12 +40,16 @@ nmap -sS -sV -p 1-65535 -iL targets.txt -oX nmap-output.xml
 ```bash
 python3 ./autossl.py 
 
-USAGE: autossl.py [nmap-ouput.xml] [output-file]
+USAGE: python3 autossl.py [nmap-output.xml | domain-list.txt] [output-file]
 ```
 
 ### Example
 ```bash
 python3 ./autossl.py  nmap-output.xml outfile.txt
+
+OR
+
+python3 ./autossl.py  domain_list.txt outfile.txt
 
 Performing sslscan of 185.176.90.16:443
 Performing sslscan of 199.101.100.186:31337
